@@ -65,6 +65,7 @@ def HandleQueries(querydata, addr, server):
     SOA = config.get('dnsproxy', 'SOA') if config.has_option('dnsproxy', 'SOA') else None
     PTR = config.get('dnsproxy', 'PTR') if config.has_option('dnsproxy', 'PTR') else None
     CNAME = config.get('dnsproxy', 'CNAME') if config.has_option('dnsproxy', 'CNAME') else None
+    AAAA = config.get('dnsproxy', 'AAAA') if config.has_option('dnsproxy', 'AAAA') else None
     Domains = ast.literal_eval(config.get('dnsproxy', 'Domains')) if config.has_option('dnsproxy', 'Domains') else None
 
     response = None

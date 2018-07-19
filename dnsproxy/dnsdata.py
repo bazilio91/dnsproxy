@@ -11,6 +11,7 @@ import socket
 query_type = {'\x00\x05' : 'CNAME',
 '\x00\x10' : 'TXT',
 '\x00\x01' : 'A',
+'\x00\x1c' : 'AAAA',
 '\x00\x0f' : 'MX',
 '\x00\x06' : 'SOA',
 '\x00\x0c' : 'PTR'}
