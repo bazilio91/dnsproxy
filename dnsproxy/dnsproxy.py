@@ -124,7 +124,7 @@ def HandleQueries(querydata, addr, server):
     if not response is None:
     #if not response is None or check_dns_packet(response, mydata.querytype()):
         myanswer = Dns_Packet(response[2:], logger)
-        if Mask: myanswer.forge_dns_packet(a_domain)
+        if Mask and QUERY != "AAAA": myanswer.forge_dns_packet(a_domain)
         logger.debug("Answer OK for {} sending back to client".format(mydata.domain()))
         sendbuf = myanswer.getdata()
         server.sendto(sendbuf, addr)
